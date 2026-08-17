@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Sorriso Premium | Odontologia Avançada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+        /* HEADER FIXO */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .logo span {
+            color: #0284c7;
+        }
+
+        .btn-header {
+            background: #0284c7;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 90px 20px 40px 20px;
+            background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%);
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(2, 132, 199, 0.1);
+            color: #0284c7;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 24px;
+            padding: 0 10px;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #22c55e;
+            color: white;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+            margin-bottom: 24px;
+        }
+
+        .hero-img-container {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* SEÇÃO DE ETAPAS (COMO FUNCIONA) */
+        .steps-section {
+            padding: 40px 20px;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title span {
+            font-size: 11px;
+            font-weight: 700;
+            color: #0284c7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-title h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .steps-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .step-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            background: #0284c7;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 3px;
+        }
+
+        .step-content p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* ESPECIALIDADES COM FOTO DA MÉDICA */
+        .services-section {
+            padding: 40px 20px;
+            background: #f1f5f9;
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .service-info p {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
+
+        .btn-card {
+            display: block;
+            text-align: center;
+            background: #f0f9ff;
+            color: #0284c7;
+            border: 1px solid #bae6fd;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">Sorriso<span>Premium</span></div>
+        <a href="https://wa.me/5512999999999?text=Olá!%20Vim%20pelo%20site%20e%20quero%20agendar." class="btn-header">Agendar</a>
+    </header>
+
+    <!-- Início / Hero -->
+    <section class="hero">
+        <span class="hero-badge">✨ Referência em Odontologia</span>
+        <h1>Seu novo sorriso com tecnologia avançada</h1>
+        <p>Atendimento humanizado, equipamentos de ponta e dentistas especialistas focados no seu conforto.</p>
+        
+        <a href="https://wa.me/5512999999999?text=Olá!%20Gostaria%20de%20marcar%20uma%20avaliação." class="btn-whatsapp">
+            💬 Agendar Avaliação no WhatsApp
+        </a>
+
+        <div class="hero-img-container">
+            <!-- Foto de uma médica/dentista atendendo em clínica moderna -->
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Dentista realizando atendimento em clínica moderna">
+        </div>
+    </section>
+
+    <!-- Seção de Etapas (Como funciona o atendimento) -->
+    <section class="steps-section">
+        <div class="section-title">
+            <span>Passo a Passo</span>
+            <h2>Como é o seu atendimento</h2>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Agendamento Rápido</h3>
+                    <p>Você escolhe o melhor horário direto pelo nosso WhatsApp em poucos segundos.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Avaliação Detalhada</h3>
+                    <p>Nossa especialista realiza exames de imagem e analisa o seu caso com total precisão.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Sorriso Transformado</h3>
+                    <p>Iniciamos o tratamento com conforto, sem dor e com garantia de excelência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tratamentos com Fotos Reais de Procedimento -->
+    <section class="services-section">
+        <div class="section-title" style="margin-bottom: 25px;">
+            <span>Especialidades</span>
+            <h2>Nossos Principais Tratamentos</h2>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Procedimento de Ortodontia" class="service-img">
+            <div class="service-info">
+                <h3>🦷 Ortodontia Moderna</h3>
+                <p>Alinhadores transparentes e aparelhos estéticos para corrigir o posicionamento com rapidez.</p>
+                <a href="https://wa.me/5512999999999?text=Quero%20saber%20mais%20sobre%20Ortodontia" class="btn-card">Saiba Mais ➔</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce6395?auto=format&fit=crop&w=800&q=80" alt="Procedimento de Estética" class="service-img">
+            <div class="service-info">
+                <h3>✨ Estética & Clareamento</h3>
+                <p>Clareamento a laser de alta performance e lentes de contato dental naturais.</p>
+                <a href="https://wa.me/5512999999999?text=Quero%20saber%20mais%20sobre%20Clareamento" class="btn-card">Saiba Mais ➔</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Procedimento Clínico" class="service-img">
+            <div class="service-info">
+                <h3>💎 Implantes Dentários</h3>
+                <p>Recupere a mastigação e a autoestima com próteses fixas seguras e modernas.</p>
+                <a href="https://wa.me/5512999999999?text=Quero%20saber%20mais%20sobre%20Implantes" class="btn-card">Saiba Mais ➔</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p><strong>Clínica Sorriso Premium</strong></p>
+        <p style="margin-top: 6px;">Todos os direitos reservados © 2026</p>
+    </footer>
+
+</body>
+</html>
